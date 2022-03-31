@@ -1,3 +1,90 @@
+* {
+  border: 1px solid rgb(86, 40, 117);
+}
+
+
+/* Carried the same general format over from queries 1-2 */
 body {
   background: peachpuff;
+  text-align: center;
+  padding: 5px 5px;
+  margin: 5px 5px;
+  font-family: sans-serif;
+  font-size: 2em;
+}
+
+/* Adds space in between each letter div. */
+div {
+  margin: 5px 0px;
+}
+
+/* Need to make the container a flexbox.
+ I used column wrap to start again. 
+ I kept the height/justify
+ from the last media query since it looked fine. */
+ .container {
+  display: flex;
+  flex-flow: column wrap;
+  min-height: 100vh;
+  justify-content: space-around;
+
+}
+
+/* Adjusted a. It's aboue the same height as the last
+a, so I just copied it all over. 
+Added chartreuse again for instructor's
+benefit. */
+.a {
+  min-height: 15vh;
+  flex-grow: 1;
+  background-color: rgb(221, 147, 193);
+  border: 5px solid chartreuse;
+  
+}
+
+/* Did infline-flex for rows. Added a gap to have spacing
+in between the items. Set margin to 0 to override to the
+div margins because otherwise there is some extra spacing
+in the section. */
+.section {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0px;
+}
+
+/* These are the same sizes throughout. */
+.b, .c, .d{
+  min-height: 15vh;
+  min-width: 15vh;
+  flex-grow: 1;
+  background-color: rgb(221, 147, 193);
+  border: 5px solid chartreuse;
+}
+
+/* Keeping the lower three paired together. I don't
+know if it matters though. */
+.section2 {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0px;
+}
+
+/* These are the same sizes throughout. */
+.e, .f, .g {
+  min-height: 15vh;
+  min-width: 15vh;
+  flex-grow: 1;
+  background-color: rgb(221, 147, 193);
+  border: 5px solid chartreuse;
+}
+
+/* h seemed to be about 3 times the height of a. */
+.h {
+  min-height: 45vh;
+  flex-grow: 3;
+  background-color: rgb(221, 147, 193);
+  border: 5px solid chartreuse;
+  
 }

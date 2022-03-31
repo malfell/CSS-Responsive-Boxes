@@ -2,18 +2,29 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <!-- Added the viewport and content part below
+    or the HTML won't switch between PC
+    and mobile screen sizes. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Media Queries 3</title>
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
     <div class="container">
       <div class="a">a</div>
-      <div class="b">b</div>
-      <div class="c">c</div>
-      <div class="d">d</div>
-      <div class="e">e</div>
-      <div class="f">f</div>
-      <div class="g">g</div>
+      <!-- Sectioned off the portion that will be
+      in rows again. -->
+      <div class="section">
+        <div class="b">b</div>
+        <div class="c">c</div>
+        <div class="d">d</div>
+        </div>
+        <div class="section2">  
+        <div class="e">e</div>
+        <div class="f">f</div>
+        <div class="g">g</div>
+      </div>
       <div class="h">h</div>
     </div>
   </body>
