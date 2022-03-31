@@ -1,3 +1,84 @@
+* {
+  border: 1px solid mediumvioletred;
+}
+
+/* Centered text, though I don't know if it matters for this,
+but figured it can't hurt to follow the activity's format.
+Adjusted padding and margins to match format. */
 body {
   background: papayawhip;
+  text-align: center;
+  padding: 5px 5px;
+  margin: 5px 5px;
+  font-family: sans-serif;
+  font-size: 2em;
+  
+} 
+
+/* Adds space in between each letter div. */
+div {
+  margin: 5px 0px;
+}
+
+
+/* Need to make the container a flexbox.
+ I used column wrap since most elements will be
+ a column, might need to do something else for the CDE
+ since they're a row. I kept the height/justify
+ from the last media query since it looked fine. */
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  min-height: 100vh;
+  justify-content: space-around;
+
+}
+
+/* a and f are the same, so I adjusted
+those together. Added chartreuse for instructor's
+benefit. */
+.a, .f {
+  min-height: 10vh;
+  flex-grow: 1;
+  background-color: rgb(147, 152, 221);
+  border: 5px solid chartreuse;
+  
+}
+
+/* b is the main outlier so it gets to be sad and alone. */
+.b {
+  min-height: 50vh;
+  flex-grow: 5;
+  background-color: rgb(147, 152, 221);
+  border: 5px solid chartreuse;
+  
+}
+
+/* Did infline-flex for rows. Added a gap to have spacing
+in between the items. Set margin to 0 to override to the
+div margins because otherwise there is some extra spacing
+in the section. */
+.section {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0px;
+}
+
+/* These are the same sizes throughout. */
+.c, .d, .e {
+  min-height: 10vh;
+  min-width: 10vh;
+  flex-grow: 1;
+  background-color: rgb(147, 152, 221);
+  border: 5px solid chartreuse;
+}
+
+/*******************************************
+COMPUTER SIZING HERE
+*******************************************/
+@media (min-width: 600px) {
+
+
+
 }
