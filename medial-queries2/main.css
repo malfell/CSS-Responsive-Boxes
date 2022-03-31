@@ -78,6 +78,7 @@ in the section. */
 COMPUTER SIZING HERE
 *******************************************/
 @media (min-width: 600px) {
+  /* Switched to rows for the PC layout. */
   .container {
     flex-flow: row wrap;
   }
@@ -93,6 +94,9 @@ COMPUTER SIZING HERE
     margin-right: 10px;
   }
 
+  /* Since one section is a grouping of rows, I
+  made those stick together. Ordered the section
+  as 5 so they'd go after the f. */
   .section {
     width: 100%;
     order: 5;
@@ -101,11 +105,14 @@ COMPUTER SIZING HERE
     
   }
 
+  /* CDE are supposed to be on their own row somewhat
+  under the F, so flex-basis moved them to a new row. */
   #break {
     flex-basis: 100%;
     height: 10vh;
   }
 
+  /* Having issues getting F to bleed into the lower row. */
   .f {
     max-width: 30%;
     height: 70vh;

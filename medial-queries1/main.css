@@ -2,6 +2,9 @@
   border: 1px solid mediumvioletred;
 } */
 
+/* Centered text, though I don't know if it matters for this,
+but figured it can't hurt to follow the activity's format.
+Adjusted padding and margins to match format. */
 body {
   background: blanchedalmond;
   text-align: center;
@@ -12,12 +15,12 @@ body {
   
 } 
 
-
+/* Adds space in between each letter div. */
 div {
   margin: 10px 0px;
 }
 
-
+/* Need to make the container a flexbox. */
 .container {
   display: flex;
   flex-flow: column wrap;
@@ -26,7 +29,9 @@ div {
 
 }     
 
-/* Included chartreuse to make instructor happy */
+/* b was a different height from others, so I adjusted its
+height separately.
+ Included chartreuse to make instructor happy */
 .b {
   min-height: 60vh;
   flex-grow: 5;
@@ -35,6 +40,7 @@ div {
   
 }
 
+/* a and c are same height, so they're adjusted together. */
 .a, .c {
   min-height: 10vh;
   flex-grow: 1;
@@ -43,11 +49,15 @@ div {
 
 }
 
+/* PC screen layout here. */
 @media (min-width: 600px) {
+  /* Switched from columns to rows. */
   .container {
     flex-flow: row wrap;
   }
 
+  /* Had to do some width adjustments to match
+  the sizes in the PC layout. */
   .a {
     width: 100%;
   }
