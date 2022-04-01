@@ -1,6 +1,7 @@
-/* * {
+/* border helpers! */
+* {
   border: 1px solid mediumvioletred;
-} */
+}
 
 /* Centered text, though I don't know if it matters for this,
 but figured it can't hurt to follow the activity's format.
