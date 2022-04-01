@@ -1,126 +1,107 @@
+/* Border helper! */
+
 * {
   border: 1px solid mediumvioletred;
+  box-sizing: border-box;
 }
 
-/* Centered text, though I don't know if it matters for this,
-but figured it can't hurt to follow the activity's format.
-Adjusted padding and margins to match format. */
+  /* Centered/enlarged text, though I don't know if it matters for this,
+  but figured it can't hurt to follow the activity's format. 
+  And I like the text being more visible anyway.
+ */
 body {
   background: papayawhip;
   text-align: center;
-  padding: 5px 5px;
-  margin: 5px 5px;
   font-family: sans-serif;
   font-size: 2em;
   
-} 
-
-/* Adds space in between each letter div. */
-div {
-  margin: 5px 0px;
 }
-
 
 /* Need to make the container a flexbox.
- I used column wrap since most elements will be
- a column, might need to do something else for the CDE
- since they're a row. I kept the height/justify
- from the last media query since it looked fine. */
+   I used column wrap since most elements will be
+   a column, might need to do something else for the CDE
+   since they're a row. I kept the height/justify
+   from the last media query since it looked fine. */
 .container {
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
   min-height: 100vh;
-  justify-content: space-around;
-
+  justify-content: space-between;
 }
 
-/* a and f are the same, so I adjusted
-those together. Added chartreuse for instructor's
-benefit. */
-.a, .f {
-  min-height: 10vh;
-  flex-grow: 1;
-  background-color: rgb(147, 152, 221);
-  border: 5px solid chartreuse;
-  
-}
-
-/* b is the main outlier so it gets to be sad and alone. */
-.b {
-  min-height: 50vh;
-  flex-grow: 5;
-  background-color: rgb(147, 152, 221);
-  border: 5px solid chartreuse;
-  
-}
-
-/* Did infline-flex for rows. Added a gap to have spacing
-in between the items. Set margin to 0 to override to the
-div margins because otherwise there is some extra spacing
-in the section. */
-.section {
-  display: inline-flex;
+.wrapper {
+  display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin: 0px;
+  flex-direction: column;
+  flex-grow: 3;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 70vh;
 }
 
-/* These are the same sizes throughout. */
-.c, .d, .e {
-  min-height: 10vh;
-  min-width: 10vh;
+
+/* All together for consistency in margins and height. 
+Max-height may have been one of my issues before. I was originally
+doing min-height.*/
+.a, .f, aside, .wrapper  {
   flex-grow: 1;
+  max-height: 10vh;
+  margin: .5em;
+  
+}
+
+/* Added chartreuse for instructor's benefit. */
+.a, .f {
+  background-color: rgb(147, 152, 221);
+  border: 5px solid chartreuse;
+}
+
+aside  {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  min-height: 20vh;
+
+}
+
+/* More chartreuse! */
+aside > div {
+  flex-grow: 10;
+  margin: .5em;
+  background-color: rgb(147, 152, 221);
+  border: 5px solid chartreuse;
+}
+
+ /* b is the main outlier so it gets to be sad and alone. */
+.b {
+  width: 90%;
+  flex-grow: 3;
+  margin: .5em;
   background-color: rgb(147, 152, 221);
   border: 5px solid chartreuse;
 }
 
 /*******************************************
-COMPUTER SIZING HERE
-*******************************************/
+  COMPUTER SIZING HERE
+  *******************************************/
 @media (min-width: 600px) {
-  /* Switched to rows for the PC layout. */
+  /* Switching to rows for PC */
   .container {
     flex-flow: row wrap;
   }
 
+  /* Everything else needed height and width adjustments */
   .a {
     width: 100%;
-    height: 25vh;
+    max-height: 10vh;
   }
-
-  .b {
-    max-width: 70%;
-    height: 25vh;
-    margin-right: 10px;
+  .wrapper {
+    flex-basis: 70%;
+    min-height:  80vh;
   }
-
-  /* Since one section is a grouping of rows, I
-  made those stick together. Ordered the section
-  as 5 so they'd go after the f. */
-  .section {
-    width: 100%;
-    order: 5;
-    flex-flow: row wrap;
-    align-items: flex-end;
-    
-  }
-
-  /* CDE are supposed to be on their own row somewhat
-  under the F, so flex-basis moved them to a new row. */
-  #break {
-    flex-basis: 100%;
-    height: 10vh;
-  }
-
-  /* Having issues getting F to bleed into the lower row. */
   .f {
-    max-width: 30%;
-    height: 70vh;
-    
-    
+    margin: .5em;
+    flex-grow: 3;
+    min-height:  80vh;
   }
-
-  
-
-  
 }

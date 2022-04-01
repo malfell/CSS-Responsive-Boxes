@@ -8,22 +8,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Media Queries 3</title>
-    <link rel="stylesheet" href="main.css">
+    <!-- added type for good practice -->
+    <link rel="stylesheet" href="main.css" type="text/css">
   </head>
   <body>
-    <div class="container">
+    <!-- added aria-hidden to hide the container for accessibility -->
+    <div class="container" aria-hidden="true">
       <div class="a">a</div>
-      <!-- Sectioned off the portion that will be
-      in rows again. -->
-      <div class="section">
-        <div class="b">b</div>
-        <div class="c">c</div>
-        <div class="d">d</div>
+      <!-- BCD and EFG are the main rows. They're put into row classes
+      and a wrapper all together. -->
+      <div class="wrapper">
+        <div class="row">
+          <div class="b">b</div>
+          <div class="c">c</div>
+          <div class="d">d</div>
         </div>
-        <div class="section2">  
-        <div class="e">e</div>
-        <div class="f">f</div>
-        <div class="g">g</div>
+        <div class="row">  
+          <div class="e">e</div>
+          <div class="f">f</div>
+          <div class="g">g</div>
+        </div>
       </div>
       <div class="h">h</div>
     </div>

@@ -8,25 +8,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Media Queries 2</title>
-    <link rel="stylesheet" href="main.css">
+    <!-- added type for good practice -->
+    <link rel="stylesheet" href="main.css" type="text/css">
   </head>
-  <body> 
-    <!-- Added aria-hidden to hide the container -->
+  <body>
+    <!-- added aria-hidden to hide the container for accessibility -->
     <div class="container" aria-hidden="true">
       <div class="a">a</div>
-      <div class="b">b</div>
-      <!-- Grouped CDE into a section so they can be
-      moved all together and set onto a new line
-      in the PC screen version. -->
-      <div class="section" id="break">
-        <div class="c">c</div>
-        <div class="d">d</div>
-        <div class="e">e</div>
+      <!-- BCDE gets sectioned together in a wrapper but B is still a little
+      outside of things. -->
+      <div class="wrapper">
+        <div class="b">b</div>
+        <aside>
+          <div class="c">c</div>
+          <div class="d">d</div>
+          <div class="e">e</div>
+        </aside>
       </div>
-
       <div class="f">f</div>
     </div>
-
-    
   </body>
 </html>
